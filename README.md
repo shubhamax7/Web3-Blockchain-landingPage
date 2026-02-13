@@ -166,7 +166,7 @@ This project is created for educational purposes as part of a GDG event assignme
 
 ## 🔗 Live Demo
 
-*Add your live deployment link here once deployed*
+https://web3-blockchain-landing-page.vercel.app
 
 ---
 
