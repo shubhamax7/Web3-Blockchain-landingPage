@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join GDG Tech Summit 2026 - A premier technical event featuring workshops, talks, and networking opportunities for developers and tech enthusiasts.">
+    <title>GDG Tech Summit 2026 | Innovate. Build. Connect.</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter looks good -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-white">
+    
+    <!-- navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-xl font-bold gradient-text">GDG Summit '26</a>
+                <button id="nav-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+                <div id="nav-links" class="hidden md:flex items-center gap-6">
+                    <a href="#about" class="text-gray-600 hover:text-purple-600 font-medium transition">About</a>
+                    <a href="#agenda" class="text-gray-600 hover:text-purple-600 font-medium transition">Agenda</a>
+                    <a href="#speakers" class="text-gray-600 hover:text-purple-600 font-medium transition">Speakers</a>
+                    <a href="#register" class="text-gray-600 hover:text-purple-600 font-medium transition">Register</a>
+                    <a href="#contact" class="text-gray-600 hover:text-purple-600 font-medium transition">Contact</a>
+                </div>
+            </div>
+            <div id="nav-mobile" class="hidden md:hidden pb-4 border-t border-gray-100">
+                <a href="#about" class="block py-2 text-gray-600 hover:text-purple-600">About</a>
+                <a href="#agenda" class="block py-2 text-gray-600 hover:text-purple-600">Agenda</a>
+                <a href="#speakers" class="block py-2 text-gray-600 hover:text-purple-600">Speakers</a>
+                <a href="#register" class="block py-2 text-gray-600 hover:text-purple-600">Register</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-purple-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- background blur effects - looks nice -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 py-20 text-center relative z-10">
+            <div class="fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    GDG Tech Summit 2026
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-8 text-gray-100">
+                    Innovate. Build. Connect.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
+                    <div class="flex items-center gap-2 text-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>March 15-16, 2026</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span>San Francisco, CA</span>
+                    </div>
+                </div>
+                <a href="#register" class="btn-primary inline-block bg-white text-purple-600 px-10 py-4 rounded-full font-semibold text-lg shadow-xl">
+                    Register Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- scroll down indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-light">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">
+                    About the Event
+                </h2>
+                <div class="space-y-6 text-lg text-gray-700 leading-relaxed slide-up">
+                    <p>
+                        GDG Tech Summit 2026 is a premier technical conference bringing together developers, 
+                        tech enthusiasts, students, and industry leaders for two days of innovation, learning, 
+                        and networking. Join us for an immersive experience featuring cutting-edge workshops, 
+                        inspiring talks, and hands-on sessions.
+                    </p>
+                    <p>
+                        Whether you're a seasoned developer or just starting your tech journey, this summit 
+                        offers something for everyone. Connect with like-minded individuals, learn from industry 
+                        experts, and discover the latest trends shaping the future of technology.
+                    </p>
+                </div>
+                
+                <!-- three feature cards -->
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <div class="feature-card text-center p-8 rounded-xl hover-lift">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Learn</h3>
+                        <p class="text-gray-600 leading-relaxed">Gain insights from industry experts and hands-on workshops</p>
+                    </div>
+                    
+                    <div class="feature-card text-center p-8 rounded-xl hover-lift">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Network</h3>
+                        <p class="text-gray-600 leading-relaxed">Connect with peers, mentors, and potential collaborators</p>
+                    </div>
+                    
+                    <div class="feature-card text-center p-8 rounded-xl hover-lift">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Innovate</h3>
+                        <p class="text-gray-600 leading-relaxed">Explore cutting-edge technologies and future trends</p>
+                    </div>
+                </div>
+                
+                <!-- target audience -->
+                <div class="mt-12 p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border-l-4 border-blue-500 shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Who Should Attend?</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 font-medium">Software Developers & Engineers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 font-medium">Tech Students & Graduates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 font-medium">Tech Enthusiasts & Entrepreneurs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 font-medium">Industry Professionals & Leaders</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="agenda" class="py-20 section-gray overflow-hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">
+                Event Agenda
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Day 1 -->
+                <div class="mb-14 slide-up">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Day 1 – March 15, 2026</h3>
+                    <div class="space-y-5">
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-purple-600">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-purple-600 font-semibold text-sm md:text-base">09:00 – 09:30</span>
+                                <span class="text-gray-500 text-sm">Registration & Networking</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Welcome & Opening Keynote</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">Kick off with an inspiring keynote</p>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-blue-500">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-blue-600 font-semibold text-sm md:text-base">10:00 – 11:30</span>
+                                <span class="text-gray-500 text-sm">Workshop</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Building Modern Web Applications</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">Shubham · React & Next.js workshop</p>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-emerald-500">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-emerald-600 font-semibold text-sm md:text-base">11:30 – 12:00</span>
+                                <span class="text-gray-500 text-sm">Break</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Coffee Break & Networking</h4>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-purple-600">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-purple-600 font-semibold text-sm md:text-base">12:00 – 01:30</span>
+                                <span class="text-gray-500 text-sm">Tech Talk</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">AI & Machine Learning: The Future is Now</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">Niraj · AI trends & applications</p>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-amber-500">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-amber-600 font-semibold text-sm md:text-base">01:30 – 02:30</span>
+                                <span class="text-gray-500 text-sm">Lunch</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Lunch & Networking</h4>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-blue-500">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-blue-600 font-semibold text-sm md:text-base">02:30 – 04:00</span>
+                                <span class="text-gray-500 text-sm">Panel</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">The Future of Cloud Computing</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">Industry experts · cloud trends</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 2 -->
+                <div class="slide-up">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Day 2 – March 16, 2026</h3>
+                    <div class="space-y-5">
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-purple-600">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-purple-600 font-semibold text-sm md:text-base">09:00 – 10:30</span>
+                                <span class="text-gray-500 text-sm">Workshop</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Mobile App Development with Flutter</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">Satya Nadela · cross-platform apps</p>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-emerald-500">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-emerald-600 font-semibold text-sm md:text-base">10:30 – 11:00</span>
+                                <span class="text-gray-500 text-sm">Break</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Coffee Break</h4>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-blue-500">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-blue-600 font-semibold text-sm md:text-base">11:00 – 12:30</span>
+                                <span class="text-gray-500 text-sm">Tech Talk</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Blockchain & Web3: Opportunities & Challenges</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">David Kim · Web3 ecosystem</p>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-amber-500">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-amber-600 font-semibold text-sm md:text-base">12:30 – 01:30</span>
+                                <span class="text-gray-500 text-sm">Lunch</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Lunch & Networking</h4>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-purple-600">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-purple-600 font-semibold text-sm md:text-base">01:30 – 03:00</span>
+                                <span class="text-gray-500 text-sm">Hackathon</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Build & Demo Session</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">Hands-on coding · mentors & prizes</p>
+                        </div>
+                        
+                        <div class="schedule-card bg-white p-5 md:p-6 rounded-xl shadow-md hover-lift border-l-4 border-purple-600">
+                            <div class="flex flex-wrap gap-x-4 gap-y-1 mb-2">
+                                <span class="text-purple-600 font-semibold text-sm md:text-base">03:00 – 04:00</span>
+                                <span class="text-gray-500 text-sm">Closing</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-semibold mt-2 text-gray-800">Closing Ceremony & Awards</h4>
+                            <p class="text-gray-600 mt-1 text-sm md:text-base">Awards and closing remarks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers -->
+    <section id="speakers" class="py-20 section-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">
+                Our Speakers
+            </h2>
+            
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                <!-- Shubham -->
+                <div class="speaker-card rounded-2xl p-8 text-center hover-lift slide-up">
+                    <div class="w-36 h-36 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 rounded-2xl mx-auto mb-6 flex items-center justify-center text-white text-5xl font-bold shadow-xl">
+                        SJ
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Shubham</h3>
+                    <p class="text-purple-600 font-semibold mb-4 text-lg">Senior Full-Stack Developer</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Expert in React, Node.js, and modern web architectures. 10+ years of experience building scalable applications.</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">React</span>
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Next.js</span>
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Node.js</span>
+                    </div>
+                </div>
+                
+                <!-- Michael Chen -->
+                <div class="speaker-card rounded-2xl p-8 text-center hover-lift slide-up">
+                    <div class="w-36 h-36 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center text-white text-5xl font-bold shadow-xl">
+                        MC
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Niraj</h3>
+                    <p class="text-blue-600 font-semibold mb-4 text-lg">AI Research Scientist</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Leading researcher in machine learning and neural networks. Published 50+ papers on AI advancements.</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Machine Learning</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Deep Learning</span>
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">AI Research</span>
+                    </div>
+                </div>
+                
+                <!-- Satya Nadela -->
+                <div class="speaker-card rounded-2xl p-8 text-center hover-lift slide-up">
+                    <div class="w-36 h-36 bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 rounded-2xl mx-auto mb-6 flex items-center justify-center text-white text-5xl font-bold shadow-xl">
+                        ER
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">Satya Nadela</h3>
+                    <p class="text-emerald-600 font-semibold mb-4 text-lg">Mobile App Architect</p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Specialist in Flutter and native mobile development. Built apps used by millions of users worldwide.</p>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">Flutter</span>
+                        <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">Dart</span>
+                        <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">Mobile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="register" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Ready to Join Us?
+                </h2>
+                <p class="text-xl mb-8 text-gray-100">
+                    Don't miss out on this incredible opportunity to learn, network, and grow. 
+                    Register now and secure your spot at GDG Tech Summit 2026!
+                </p>
+                
+                <div class="bg-white/20 backdrop-blur-md rounded-2xl p-8 mb-8 border border-white/30 shadow-xl">
+                    <div class="grid md:grid-cols-2 gap-6 text-left">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">What's Included:</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Access to all sessions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Workshop materials</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Networking opportunities</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Lunch & refreshments</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Registration Details:</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Early Bird: ₹3,999 (till 28 Feb)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Regular: ₹6,499 (after 28 Feb)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span>Students: 50% off (valid ID)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <p class="text-lg mb-4">
+                        <strong>Registration Deadline:</strong> March 10, 2026
+                    </p>
+                    <!-- TODO: replace with actual form link -->
+                    <a href="https://forms.google.com/dummy-registration-link" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block bg-white text-purple-600 px-12 py-5 rounded-full font-bold text-lg shadow-2xl">
+                        Register Now
+                    </a>
+                </div>
+                
+                <p class="text-sm text-gray-200">
+                    Limited seats available. Register early to secure your spot!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">GDG Tech Summit</h3>
+                        <p class="text-gray-400 mb-4">
+                            Bringing together developers, innovators, and tech enthusiasts 
+                            for an unforgettable learning experience.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <a href="mailto:info@gdgtechsummit.com" class="hover:text-white transition">info@gdgtechsummit.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <!-- social links -->
+                            <a href="https://twitter.com/gdgtechsummit" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-500 hover:scale-110 transition-all duration-300 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/company/gdgtechsummit" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/gdgtechsummit" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 hover:scale-110 transition-all duration-300 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a href="https://facebook.com/gdgtechsummit" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 hover:scale-110 transition-all duration-300 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                    <p>&copy; 2026 GDG Tech Summit. All rights reserved.</p>
+                    <p class="mt-2">Organized by Google Developer Groups</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // mobile nav toggle
+        var toggle = document.getElementById('nav-toggle');
+        var mobileMenu = document.getElementById('nav-mobile');
+        if (toggle && mobileMenu) {
+            toggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        // smooth scroll for # links
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (mobileMenu) mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
